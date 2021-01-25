@@ -1,5 +1,5 @@
 /* Navbar will have links to navigate to git hub repo and dark mode option   */
-const Navbar = () => {
+const Navbar = ({toggleTheme}) => {
     return (
         <div className="navbar-container">
             <ul>
@@ -7,6 +7,9 @@ const Navbar = () => {
                 <li><button onClick={() => window.open('https://github.com/', "_blank")}>Git Hub</button></li>
             </ul>
             {/* here goes the code for dark mode */}
+            <div className="switch" onClick={toggleTheme}>
+                <i className="fa fa-adjust" style={{fontSize:'25px'}}></i>
+            </div>
         </div>
     );
 }

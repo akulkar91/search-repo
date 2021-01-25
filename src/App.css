@@ -1,5 +1,5 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   outline: none;
   font-family:cursive;
 }
@@ -27,15 +27,17 @@
 }
 /*Nav bar styling*/
 .navbar-container {
-  position:sticky;
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  background-color:lightblue;
+  box-shadow:10px 5px 5px grey;
 }
 .navbar-container ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  box-shadow:10px 5px 5px grey;
-  background-color:lightblue;
 }
 
 .navbar-container ul li {
@@ -50,7 +52,9 @@
   /* font-size: 14px; */
   font-weight: 700;
 }
-
+.navbar-container .switch {
+  padding:5px;
+}
 /* search box styles*/
 .search-form{
   max-width: 300px;
@@ -60,39 +64,32 @@ form.search-form input{
   float:left;
   padding:5px;
   /* width:20%; */
-  height:30px;
+  height:41px;
   border:1px solid grey;
   background: #f1f1f1;
   border-radius: 5px 0 0 5px;
-  
+  opacity: .75;
 }
 form.search-form button {
   float: left;
   /* width: 20%; */
   padding: 10px;
   background: #2196F3;
-  color: black;
-  /* font-size: 16px; */
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
   border-radius: 0 5px 5px 0;
+  opacity: .75;
 }
-/* form.search-form::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
+
+
 /* list-of-cards styles */
 .list-of-cards {
   display: flex;
-  flex-wrap: column wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.list-of-cards::after {
-  content: "";
-  flex: auto;
-}
+
 /* card styles */
 .card {
   max-width: 500px;
@@ -104,6 +101,7 @@ form.search-form button {
   overflow:hidden ;
   overflow-wrap: break-word;
   box-sizing: border-box;
+  border: 1px solid;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -161,11 +159,4 @@ form.search-form button {
   .card {
     flex: 0 1 calc(25% - 1em);
    }
-}
-
-
-@media screen and (min-width: 52em) {
-  .centered {
-      
-  }
 }

@@ -38,7 +38,7 @@ export const useFetch = ({
 
     useEffect(() => {
         if(api !== null && triggerOnMount) fetchData();
-    },[]);
+    });
 
     return { 
         response,
