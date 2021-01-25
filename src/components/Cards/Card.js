@@ -7,7 +7,8 @@ const Card = ({
     const {
         name,
         owner,
-        description
+        description,
+        svn_url
     } = repo;
     return (
         <div className="card">
@@ -22,7 +23,7 @@ const Card = ({
                     </p>
                     <p className="url">
                         <b>Repo link:</b>
-                        <a href={owner.html_url} target="_blank" rel="noreferrer"> {owner.html_url} </a>
+                        <a href={svn_url} target="_blank" rel="noreferrer"> {svn_url} </a>
                     </p>
                 </div>
             </div>            
