@@ -30,7 +30,7 @@ const Home = () => {
             {/* Implement cards component to display list of repositories. One card per one repo */}
             {loading && <div>Loading...<i class="fa fa-spinner" aria-hidden="true"></i></div> }
             <section className="list-of-cards">
-                {response.map(repo => <Card repo={repo}/>)}
+                {response.map((repo,idx) => <Card key={`card_${idx}`}repo={repo}/>)}
             </section>
         </div>
     );

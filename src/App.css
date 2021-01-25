@@ -71,7 +71,7 @@ form.search-form button {
   /* width: 20%; */
   padding: 10px;
   background: #2196F3;
-  color: white;
+  color: black;
   /* font-size: 16px; */
   border: 1px solid grey;
   border-left: none;
@@ -86,8 +86,12 @@ form.search-form button {
 /* list-of-cards styles */
 .list-of-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: column wrap;
   justify-content: space-between;
+}
+.list-of-cards::after {
+  content: "";
+  flex: auto;
 }
 /* card styles */
 .card {
@@ -99,6 +103,7 @@ form.search-form button {
   flex: 0 1 calc(25% - 1em);
   overflow:hidden ;
   overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

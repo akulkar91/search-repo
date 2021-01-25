@@ -22,7 +22,7 @@ const Card = ({
                     </p>
                     <p className="url">
                         <b>Repo link:</b>
-                        <a href={owner.html_url} target="_blank"> {owner.html_url} </a>
+                        <a href={owner.html_url} target="_blank" rel="noreferrer"> {owner.html_url} </a>
                     </p>
                 </div>
             </div>            
