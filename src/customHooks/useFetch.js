@@ -31,7 +31,7 @@ export const useFetch = ({
                }
            })
            .catch((error) => {
-               setResponse(state => (state) );
+               setResponse([]);
                setLoading(false);
             });
     };

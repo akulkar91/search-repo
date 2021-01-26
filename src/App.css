@@ -4,10 +4,7 @@
   font-family:cursive;
 }
 .App {
-  text-align: center;
-  /* margin:0 1em; */
-  /* border-radius: 5px; */
-  
+  text-align: center;  
 }
 
 .App-container {
@@ -18,8 +15,6 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
 }
 .home {
   width:80%;
@@ -49,7 +44,6 @@
   padding: 8px;
   background: transparent;
   border:none;
-  /* font-size: 14px; */
   font-weight: 700;
 }
 .navbar-container .switch {
@@ -97,18 +91,18 @@ form.search-form button {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin: 10px;
-  flex: 0 1 calc(25% - 1em);
+  flex: 0 1 350px;
   overflow:hidden ;
   overflow-wrap: break-word;
   box-sizing: border-box;
   border: 1px solid;
 }
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .card .card-wrapper {
   padding: 2px 16px;
-  position: absolute;
 }
 .card .card-wrapper .title-card{
   display: flex;
@@ -117,10 +111,7 @@ form.search-form button {
   justify-content:flex-start;
   padding: 5px 0;
 }
-.title-card *{
-  /* flex-grow: 1; */
-  /* align-self: auto; */
-}
+
 .title-card img{
   width: 50px;
   border-radius: 50%;
@@ -134,29 +125,4 @@ form.search-form button {
 }
 .card-body {
   max-width: 300px;
-}
-@media screen and (min-width: 40em) {
-  .list-of-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
- }
-
-  .card {
-    flex: 0 1 calc(50% - 1em);
-  }
-  .title-card{
-
-  }
-}
-
-@media screen and (min-width: 60em) {
-  .list-of-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
- }
-  .card {
-    flex: 0 1 calc(25% - 1em);
-   }
 }

@@ -15,10 +15,10 @@ const Card = ({
             <div className="card-wrapper">
                 <div className="title-card">
                     <img src={owner.avatar_url} alt="Avatar"></img>
-                    <h3>{name}</h3>
+                    <h3 title={name}>{name}</h3>
                 </div>
                 <div className="card-body">
-                    <p className="description">
+                    <p className="description" title={description}>
                         <b>Description:</b> {description}
                     </p>
                     <p className="url">
