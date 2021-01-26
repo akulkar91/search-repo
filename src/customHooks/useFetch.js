@@ -14,7 +14,7 @@ export const useFetch = ({
 }) => {
     const [response, setResponse] = useState([]);
     const [loading, setLoading] = useState(false);
-    // const [isValidUser, setIsValidUser] = useState(false);
+    const [message, setMessage] = useState('Enter a user name to fetch list of repositories');
     
     const fetchData = () => {
         
@@ -28,11 +28,13 @@ export const useFetch = ({
                if(data){
                    setResponse(data);
                    setLoading(false);
+                   data.length > 0 ? setMessage('') : setMessage('No repositories to display');
                }
            })
            .catch((error) => {
                setResponse([]);
                setLoading(false);
+               setMessage('Unable to fetch');
             });
     };
 
@@ -43,6 +45,7 @@ export const useFetch = ({
     return { 
         response,
         loading,
+        message,
         fetchData
     };
 };
